@@ -1,0 +1,272 @@
+/* Header */
+header {
+	display: block;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+	z-index: 10;
+	background-color: var(--colorHeader);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 60px;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.headerProjectTitle {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	right: 30px;
+	letter-spacing: 0.0625rem;
+	font-size: 0.625rem;
+	color: #fff;
+}
+
+.headerProjectTitle>div {
+	position: relative;
+}
+
+.slideNumber {
+	color: var(--colorHighlight);
+	font-weight: 300;
+	font-size: 20px;
+	margin-left:10px
+}
+
+.slideTitleContainer {
+	position: absolute;
+	/* background-color: red; */
+	max-width: calc(100% - 130px);
+	height: 100%;
+	left: 60px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.fullscreenButtonExit {
+	display: none;
+}
+
+/* Top navigator */
+.slideTitleItem {
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	cursor: pointer;
+	padding-left: 20px;
+	font-size: 0.75rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	background-image: var(--navigatorIcon);
+	background-repeat: no-repeat;
+	background-position: left;
+	color: rgba(255, 255, 255, 0.0);
+	transition: all 0.5s ease;
+	opacity: 0.5;
+	display: flex;
+		flex-direction: row;
+		
+		flex-wrap: nowrap; 
+		align-items: center;
+}
+
+
+
+.slideTitleItemHoverPrev {
+	background-image: var(--navigatorIconLast);
+}
+
+.slideTitleItem:last-child {
+	background-image: var(--navigatorIconLast);
+}
+
+body.hasHover .slideTitleItem:hover {
+	opacity: 1;
+	background-image: var(--navigatorIconHovered);
+}
+
+.slideTitleItemActive {
+	width: auto;
+	padding: 0 7px 0 20px;
+	background-image: var(--navigatorIconSelected) !important;
+	color: #fff;
+	cursor: default;
+	opacity: 1;
+}
+
+/* Top navigator */
+
+/* Header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+	border-top: solid 1px rgba(255, 255, 255, 0.2);
+
+	background-color: var(--colorFooter);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 60px;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	z-index: 10;
+}
+
+.footer div {
+	position: relative;
+}
+
+.footer>div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	width: calc(100% / 3);
+	justify-content: center;
+}
+
+.footer>div:first-child {
+	justify-content: flex-start;
+}
+
+.footer>div:last-child {
+	justify-content: flex-end;
+}
+
+.footer>div>div {
+	margin: 0 5px;
+}
+
+.footer>.footerRight>div:last-child {
+	margin: 0 0 0 5px;
+}
+
+.footer>.footerLeft>div:first-child {
+	margin: 0 5px 0 0;
+}
+
+.footerLogo img {
+	vertical-align: middle;
+}
+
+.renderLabel {
+	position: absolute;
+	bottom: 0;
+	padding: 0 0 calc(var(--footerHeight) + 5px) 10px;
+	z-index: 1;
+	font-size: 12px;
+	color: white;
+	pointer-events:none;
+}
+
+
+
+
+.footerCenterColumn .wpb_wrapper,
+.footerRightColumn .wpb_wrapper,
+.footerLeftColumn .wpb_wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+}
+
+.footerCenterColumn .w-btn-wrapper,
+.footerRightColumn .w-btn-wrapper,
+.footerLeftColumn .w-btn-wrapper {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+
+.footerCenterColumn .wpb_wrapper {
+	justify-content: center;
+}
+
+.footerLeftColumn {
+	padding-left: 20px;
+}
+
+.footerRightColumn {
+	padding-right: 20px;
+}
+
+.footerRightColumn .wpb_wrapper {
+	flex-direction: row-reverse;
+}
+
+.footerLeftColumn .wpb_wrapper {
+	flex-direction: row;
+}
+
+
+.autoplayStop {
+	display: none;
+}
+
+.autoPlayProgressBar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 5px !important;
+	background-color: var(--colorHighlight);
+	z-index: 100;
+	transform-origin: left;
+	animation: autoPlayProgress 20s linear 1 normal forwards;
+	-webkit-animation: autoPlayProgress 20s linear 1 normal forwards;
+}
+
+
+
+
+
+
+.iconMap {
+	cursor: default;
+}
+
+.icon360 {
+	cursor: default;
+}
+
+.icon360 img {
+	pointer-events: none;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}

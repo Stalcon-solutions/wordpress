@@ -1,0 +1,68 @@
+<style>
+    .testimonial {
+        padding: 60px !important;
+    }
+    .testimonialText{
+        font-family: var(--fontSerif);
+        font-size: 1.5em;
+        font-style: italic;
+        font-weight: 500;
+        color: var(--colorGreen);    
+    }
+    .testimonialText::before{
+        content: '\201D';
+    }
+    .testimonialText::after{
+        content: '\201E';
+    }
+    .testimonialText::before, .testimonialText::after{
+        font-size: 3em;
+        line-height: 0;
+        display: block;
+        opacity: 0.5;
+    }
+    .testimonialText::after{
+        display: inline;
+        padding-left: 0.1em;
+    }
+    .testimonialAuthor{
+        text-align: right;
+        margin-top: 1em;
+    }
+</style>
+
+
+<div class="animatedChildrens col3">
+    <div data-popup-id="pop1" data-popup-group="testimonial">
+        <img src="/wp-content/uploads/icons/empty-icon-01.svg" class="contentIcon" alt="icon" />
+        <div class="divider20"></div>
+        <h4>Client testimonials</h4>
+    </div>
+    <div data-popup-id="pop12" data-popup-group="testimonial" style="display: none;"></div>
+
+    <div data-popup-id="pop2">
+        <img src="/wp-content/uploads/icons/empty-icon-01.svg" class="contentIcon" alt="icon" />
+        <div class="divider20"></div>
+        <h4>Mix of clients</h4>
+    </div>
+
+    <div data-popup-id="pop3">
+        <img src="/wp-content/uploads/icons/empty-icon-01.svg" class="contentIcon" alt="icon" />
+        <div class="divider20"></div>
+        <h4>Client Acquisition</h4>
+    </div>
+</div>
+
+
+
+<div id="pop1" class="testimonial">
+        <div class="testimonialText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec nunc ultrices, feugiat ante et, pretium lorem. Sed eu iaculis est, quis efficitur lectus. In quis dui elit. Curabitur interdum quam aliquet, cursus neque sit amet, porta mi. Praesent in diam tempus, convallis ipsum vitae, porttitor nulla. Nullam eleifend nibh ipsum, nec vehicula velit fringilla vel.</div>
+        <div class="testimonialAuthor"><b>Frank Moska</b> - Mosca Pserras Architects</div>
+</div>
+<div id="pop12" class="testimonial">
+        <div class="testimonialText">Nulla sed accumsan dolor. Fusce eleifend faucibus sem ut laoreet. Mauris hendrerit sodales nisl, at ullamcorper risus ultricies ut. Vivamus venenatis lorem ac nisl malesuada, vitae ullamcorper sapien porta. Sed nec bibendum sapien, et efficitur libero. Curabitur in odio a nulla accumsan volutpat et non felis. Nulla felis leo, porttitor vel pulvinar a, maximus vel arcu. Phasellus fermentum odio id commodo tincidunt. Morbi ullamcorper quis magna at aliquam. Integer aliquet eleifend nulla eu vulputate.</div>
+        <div class="testimonialAuthor"><b>Michael Dakhoul</b> - PM and QS Construction Consultants</div>
+</div>
+
+<div id="pop2"><br><br><br>Mix of clients - Infographics<br><br><br></div>
+<div id="pop3"><br><br><br>Client Acquisition - Infographics<br><br><br></div>

@@ -1,0 +1,244 @@
+
+[
+    {
+        "key": "group_644f7eb976507",
+        "title": "Page customization",
+        "fields": [
+            {
+                "key": "field_6688fed3a9246",
+                "label": "Shortcuts",
+                "name": "",
+                "aria-label": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "<b>Insert HTML File:<\/b> [include_html file='..\/uploads\/html\/about.html']",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_65d19cdb2af6f",
+                "label": "Left side content",
+                "name": "left_side_content",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "text",
+                "media_upload": 0,
+                "toolbar": "full",
+                "delay": 0
+            },
+            {
+                "key": "field_65d0db67de79a",
+                "label": "Left side properties",
+                "name": "page_left_props",
+                "aria-label": "",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "gradient": "Dark gradient",
+                    "permeable": "Permeable text"
+                },
+                "default_value": [],
+                "return_format": "value",
+                "allow_custom": 0,
+                "layout": "vertical",
+                "toggle": 0,
+                "save_custom": 0,
+                "custom_choice_button_text": "Add new choice"
+            },
+            {
+                "key": "field_645132c81586c",
+                "label": "Page type",
+                "name": "page_type",
+                "aria-label": "",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "pano": "360 Panorama",
+                    "map": "Map",
+                    "render": "3D Render (show label)",
+                    "popup": "Page has Popups",
+                    "carousel": "Page has Carousel",
+                    "tabs": "Page has Tabs"
+                },
+                "default_value": [],
+                "return_format": "value",
+                "allow_custom": 0,
+                "layout": "vertical",
+                "toggle": 0,
+                "save_custom": 0,
+                "custom_choice_button_text": "Add new choice"
+            },
+            {
+                "key": "field_644fdf45d2fcf",
+                "label": "Panorama URL",
+                "name": "panorama_url",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_645132c81586c",
+                            "operator": "==",
+                            "value": "pano"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65e9bf5107523",
+                "label": "Hide page at domain (separated by comma, without 'www' and 'https:\/\/')",
+                "name": "hide_at_domain",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6688096330126",
+                "label": "CSS files (One per line, without path. Must be at 'uploads\/css' folder)",
+                "name": "css_files",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "rows": 3,
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_6688086a9965b",
+                "label": "JS files (One per line, without path. Must be at 'uploads\/js' folder)",
+                "name": "js_files",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "rows": 3,
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_645675ee9dd0f",
+                "label": "Background Image",
+                "name": "background_image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "full"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                },
+                {
+                    "param": "page_template",
+                    "operator": "!=",
+                    "value": "page-iframe.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "discussion",
+            "comments",
+            "author",
+            "featured_image"
+        ],
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

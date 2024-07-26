@@ -1,0 +1,510 @@
+/*
+
+min-width:X = device width >= X
+max-width:Y = device width <= Y
+------------------------------------
+Smartphone horizontal: <1024
+Tablet horizontal: >= 1024
+Laptops: >=1280
+and (orientation: landscape)
+
+MacBook Air: = 1280
+Laptops & Desktops full hd: 1920
+
+*/
+
+
+/* Vertical smartphones and tablets - show black screen */
+@media only screen and (orientation: portrait) and (max-height: 1279px) {
+    .verticalScreenLocker {
+        display: flex;
+    }
+}
+
+body.ios .fullscreenButtonEnter{
+    display: none !important;
+}
+
+/* Not Desktop */
+@media only screen and (max-width: 1279px) {
+    .hideAtMobile{
+        display: none !important;
+    }
+}
+
+/* Tablets Horizontal */
+@media only screen and (orientation: landscape) and (min-width: 1024px) and (max-width: 1279px) {
+    h1 {
+        /* font-size: 35px;
+        font-size: 3vmax;
+        font-size: max(4vmin, 14px); */
+    }
+    h2 {
+        /* font-size: 18px; */
+        font-size: max(2vmin, 12px);
+        margin: 20px 0;
+    }
+    h4 {
+        /* font-size: 1.1vw; */
+    }
+    h5 {
+        /* font-size: 4vw; */
+    }
+    .headerProjectTitle span {
+        display: none;
+    }
+    .leftSide {
+        font-size: 14px;
+        line-height: 1.3em;
+    }
+    ul>li {
+        margin-bottom: 5px;
+    }
+    .buttonSecondary {
+        font-size: 1.0vw;
+    }
+    .buttonSecondary i {
+        display: none;
+    }
+    .col3>div {
+        padding: 20px;
+    }
+    html {
+        font-size: 1.2vw;
+    }
+
+    body.fullscreen .menuOpenButtonTop {
+        display: none !important;
+    }
+    body.fullscreen .menuButtonFooter  {
+        display: block !important;
+    }
+    .leftSide img{
+        transform: scale(70%);
+        transform-origin: left bottom;
+    }
+    
+    .leftSide {
+        width: 30%;
+        overflow-x: hidden;
+    }
+    
+    .rightSide {
+        width: 70%;
+    }
+    h1{
+        font-size: max(3.8vmin, 14px);
+    }
+    .teamContent{
+        max-width: 60% !important;
+    }
+}
+
+
+
+
+
+
+
+/* Smartphones Horizontal */
+@media only screen and (orientation: landscape) and (max-width: 1023px) {
+    * {
+        --thumbLineHeight: 60px !important;
+        --footerHeight: 50px !important;
+        --headerHeight:0px !important;
+        --hotspotSize:20px;
+        --hotspotIconSize:16px;
+        --floorSelectorHotspotSize:22px;
+        --f-thumb-width: 48px !important;
+        --f-thumb-height: 36px !important;
+    }
+
+    html, .ggskin{
+        font-size: 11px;
+        line-height: 1.0;
+    }
+    h1{
+        font-size: 18px;
+    }
+    h2{
+        font-size: max(2vmin, 14px);
+        font-weight: 300;
+        /* padding: 10px 0;
+        margin: 10px 0; */
+    }
+    .leftSide hr {
+        margin: 15px 0;
+    }
+    hr{
+        margin: 15px auto;
+    }
+    .footer{
+        height:var(--footerHeight);
+    }
+    .mapPinInsideNumber {
+        font-size: 10px;
+    }
+    .buttonPrimary, .buttonSecondary{
+        width: 36px;
+        height: 36px;
+    }
+    .buttonSecondary,
+    .buttonPrimaryWithText {
+        height:auto;
+        width:auto;
+        padding: 5px 7px;
+    }
+    .slideTitleContainer,
+    .headerProjectTitle,
+    .menuTop,
+    .menuBottom {
+        display: none !important;
+    }
+
+    .mainMenu {
+        top: 0 !important;
+        height: 100vh !important;
+    }
+
+    main {
+        padding: 0 0 40px 0 !important;
+    }
+
+    main[data-page-url="start"] {
+        padding: 15px 0 !important;
+    }
+    .startScreenLogo{
+        width:150px !important;
+    }
+    .startScreenLogo img {
+        width:150px !important;
+    }
+
+    .startScreenTitle h1,
+    .startScreenSubTitle,
+    .startScreenTitle h1 i
+    {
+        font-size: 26px !important;
+    }
+    .startScreen{
+        padding: 0 !important;
+    }
+    .startScreenCenter > div {
+        margin: 10px 0 !important;
+    }
+
+    .startScreenButton{
+        border:none;
+        box-shadow: 0 0 0 4px rgba(255,255,255,0.2);
+        width:200px !important;
+        height: 40px !important;
+    }
+    .startScreenButton .startArrow{
+        background-image: var(--startArrowIconHover);
+        left:auto;
+        right:10px;
+    }
+    .startScreenButton .startText{
+        opacity: 1;
+        transform: translate(calc(-50% - 20px), -50%);
+        font-size: 12px !important;
+    }
+    .menuContainer {
+        width: 300px !important;
+    }
+
+
+
+    .buttonPrimary {
+        padding: 5px 10px !important;
+        font-size: 9px !important;
+    }
+
+    header {
+        display: none !important;
+    }
+
+    .leftLogo.fyveLogo {
+        width:70px !important;
+    }
+    .leftLogo.binahLogo {
+        width:70px !important;
+    }
+    .leftLogo.benchmarkLogo {
+        width:100px !important;
+    }
+    .main[data-page-url="track-record"] .leftSideLogotypes{
+        margin-bottom: 10px;
+        height: 20px !important;
+    }
+    .pageBgAnimated {
+        animation: none;
+        -webkit-animation: none;
+    }
+
+    .menuButtonFooter {
+        display: block !important;
+    }
+
+    .menuCloseButton {
+        top: 0 !important;
+        right: -40px !important;
+        border-radius: 0 5px 5px 0 !important;
+        background-color: var(--menu1levelBg) !important;
+        transform-origin: left;
+    }
+
+    .startScreenBottomText{
+        font-size: 10px !important;
+        line-height: 1;
+        font-weight: 300 !important;
+    }
+    .startScreenBottomText br{
+        display: none;
+    }
+    .buttonSecondary i {
+        display: none;
+    }
+
+    .leftSide {
+        padding:15px;
+        width: 30%;
+        overflow-x: hidden;
+    }
+    
+    .rightSide {
+        width: 70%;
+    }
+    .col1, .col2, .col3, .col4 {
+        align-content: center;
+    }
+    body [data-page-url="executive-team"]  .rightSide > div{
+        align-content: flex-start;
+    }
+    body [data-page-url="fyve-feature"]  .rightSide > div{
+        align-content: flex-start !important;
+    }
+    body [data-page-url="disclaimers"]  .rightSide > div{
+        align-content: flex-start !important;
+    }
+    body [data-page-url="about-benchmark"]  .rightSide > div {
+        align-content: flex-start !important;
+    }
+    body [data-page-url="contact-us"] .rightSide > div{
+        /* align-content: flex-start !important; */
+    }
+    .col1 > div, .col2 > div, .col3 > div, .col4 > div {
+        padding: 20px;
+    }
+    .contentIcon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 5px;
+    }
+    .teamGrid{
+        align-content: normal !important;
+        margin:0;
+    }
+    .personRole{
+        font-size: 1.1vw;
+    }
+    .teamPopupImage{
+        max-width: none !important;
+        max-height: none !important;
+        width:150px !important;
+        height:150px !important;
+        float:left;
+        margin-right:20px !important;
+    }
+    .teamPopupName{
+        font-size: 24px;
+    }
+    .personName{
+        font-size: 16px !important;
+    }
+    .personRole{
+        font-size: 12px !important;
+    }
+
+    .col2.perth-btr>div {
+        height: auto;
+    }
+    .floorplanMobileHideAtStart{
+        width:50px;
+        transition: none !important;
+    }
+    .roomInfo{
+        padding:10px !important;
+    }
+    .roomInfoIcon{
+        display: none;
+    }
+    .roomInfoRow{
+        margin-bottom: 5px;
+    }
+    .timelineContent{
+        justify-content: flex-start;
+        padding-top:20px;
+    }
+    .contactUsBlocks{
+        font-size: 1.1vw;
+        font-weight: bold;
+    }
+    .floorPlanSkinElement{
+        left:0 !important;
+    }
+    .floorLeftPanelTop{
+        margin-top: 10px !important;
+        font-size:16px !important;
+    }
+    .floorValuesTable{
+        margin-top: 10px !important;
+    }
+    .floorViewDrawButton {
+        left: auto !important;
+        right:10px;
+    }
+    .floorShowAvailable{
+        margin-top: 10px !important;
+    }
+
+    .floorPlanOpenButton .ggskin_svg,
+    .floorPlanButtons .ggskin_svg
+    {
+        width:22px !important;
+        height: 22px !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    .floorPlanOpenButton, .floorPlanButtons{
+        width:36px !important;
+        height: 36px !important;
+    }
+    .icon360 img {
+        width:22px !important;
+        height: 22px !important;
+    }
+    .switherItem{
+        font-size: 10px;
+    }
+    .popupCloseButton {
+        top: 2px !important;
+        right: 2px !important;
+    }
+
+
+    body[data-page-url="about-benchmark"] .rightSide .divider{
+        height: 5px !important;
+    }
+    .leftSide .divider20, .leftSide .divider{
+        display: none;
+    }
+    h4 {
+        font-size: 16px;
+        margin: 0 !important;
+        line-height: 1.2em;
+    }
+    .f-button{
+        width:30px !important;
+        height:30px !important;
+    }
+    .f-button .material-icons {
+        font-size: 14px !important;
+    }
+    .f-button.is-next {
+        right: 0 !important;
+    }
+    .f-button.is-prev{
+        left:0 !important;
+    }
+    .legend div {
+        margin:1px 0;
+    }
+    .legend div img {
+        width:10px;
+        height:10px;
+    }
+    .personImage, .teamPopupImage {
+        width: 8vw;
+        height: 8vw;
+    }
+    .personRole {
+        margin: 5px 0 0 0;
+        font-size: 10px !important;
+    }
+    /* .teamContent > div{
+        display: flex;
+    }
+    .teamContent > div > div{
+        position: relative;
+    } */
+    .awardsImage{
+        height:80px;
+    }
+    .tabHeader img {
+        height: auto;
+        width:65px;
+    }
+    .binah-feature-right{
+        margin: 20px auto;
+    }
+    .binah-feature-right >div{
+        margin-bottom: 20px;
+    }
+
+    body[data-page-url="timeline"] .rightSide{
+        padding: 0 !important;
+    }
+    body[data-page-url="timeline"] .col1 > div{
+        padding-left: 0 !important;
+    }
+    .yellowBg{
+        display: block;
+    }
+    body[data-page-url="fyve-feature"] .rightSide .divider{
+        display: none;
+    }
+    body[data-page-url="financials"] .rightSide .divider{
+        display: none;
+    }
+    .bigPopup .mapPinContentText {
+        padding: 0;
+    }
+    .mapPinContentText h4{
+        margin-bottom: 10px !important;
+    }
+    .mapPinContentContainer {
+        /* margin-bottom:10px !important; */
+    }
+    .mapPinContentContainerBottom{
+        overflow-y: hidden !important;
+    }
+    .mapPinContentImage{
+        min-height: 200px !important;
+    }
+    .mapPinContentText .divider, .mapPinContentText .divider30{
+        display: none;
+    }
+    .logoSmall{
+        height: 10px;
+    }
+    body[data-page-url="benchmark-project-fund-a"] .popupContent.bigPopup .mapPinContentContainerBottom>div{
+        padding: 5px 0 5px 5px;
+    }
+    .popupContent{
+        padding: 10px !important;
+    }
+    .mapPinContentContainer {
+        margin-bottom: 0px !important;
+    }
+    .buttonOpenPanoramaFromPopup{
+        margin:10px 0;
+    }
+    .ggskin {
+        font-size: 10px !important;
+    }
+    .ggskin_hotspot .ggskin_text > div{
+        box-shadow: 0 0 5px #00000010;
+    }
+}

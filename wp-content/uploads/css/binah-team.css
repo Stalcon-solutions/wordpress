@@ -1,0 +1,22 @@
+*{
+    --f-thumb-height: 90px !important;
+    --f-thumb-width: 90px !important;
+}
+.teamContainer {
+    /* background-color: red; */
+    margin-top:10vh;
+}
+.personNew{
+    display: flex;
+    height: 60vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.personNew div{
+    position: relative;
+}
+.personNewImage>img{
+    height: 40vh;
+}
