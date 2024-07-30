@@ -1,0 +1,101 @@
+.mapPinContentContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+}
+.mapPinContentImage{
+    width: 50%;
+    margin: 0 50px 0 0;
+    position: relative;
+}
+.mapPinContentText{
+    position: relative;
+    width: 50%;
+}
+.mapPinContentContainerBottom{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.mapPinContentContainerBottom span{
+    font-weight: normal;
+}
+
+.mapPinContentText h3{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.trackRecord--current--, .trackRecord--completed--, .trackRecord--completed--featured, .trackRecord--current--featured{
+    display: inline-block;
+    width:0.7em;
+    height: 0.7em;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.trackRecord--current--{
+    background-color: var(--colorBlack);
+    display: none;
+}
+.trackRecord--completed--featured, .trackRecord--current--featured{
+    background-color: var(--colorBeige);
+}
+.trackRecord--completed--{
+    background-color: var(--colorGreen);
+}
+
+
+/* Legend */
+.legend50{
+    opacity: 0.3;
+}
+.legend{
+    width:15px;
+    height:15px;
+    background-color: black;
+    box-shadow:0 0 0 3px #ffffff50;
+    display: inline-block;
+    border-radius: 50%;
+    margin:0 10px 0 0;
+}
+.trackRecordLegend{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.trackRecordLegend>div{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom:10px;
+    position: relative;
+}
+.trackRecordLegend>div div{
+    position: relative;
+}
+.trackRecordLegend>div{
+    pointer-events: all;
+    cursor: pointer;
+}
+.legend.completed{
+    background-color: var(--colorGreenDark);
+}
+.legend.underConstruction{
+    background-color: var(--colorBlack);
+}
+.legend.featured{
+    background-color: var(--colorHighlight);
+}
+/* Legend */
+
+.popupContent{
+    width:max(70vw, 900px);
+    max-width:90vw;
+    min-height:70vh;
+}
+body[data-domain="binah-map.visionpitch.com.au"] .headerProjectTitle{
+    /* display: none; */
+}

@@ -1,0 +1,41 @@
+table{
+    width:100%;
+    border-collapse: collapse;
+    height: 70vh;
+}
+th, td{
+    background-color: #f0f0f0;
+    border:solid 1px white;
+    padding: 1em 1em;
+    text-align: center;
+
+}
+th{
+    background-color: var(--colorBeige);
+    color: white;
+    font-weight: bold;
+}
+tr:nth-child(even) td{
+    background-color:#f8f8f8;
+}
+tr td:nth-child(1){
+    text-align: left;
+    font-weight: bold;
+    color: var(--colorGrayDark);
+}
+tr:last-child td{
+    font-weight: bold;
+    color: var(--colorGreen);
+}
+body.hasHover td{
+    transition: all 0.3s ease;
+}
+body.hasHover tr:hover td{
+    background-color: var(--colorGreen);
+    color: white;
+    transition: all 0.0s ease;
+}
+.expansionReginsTable th, .expansionReginsTable td{
+    padding: 7px 10px;
+    padding: 1vh 1vw;
+}

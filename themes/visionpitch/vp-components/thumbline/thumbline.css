@@ -1,0 +1,178 @@
+.thumbContainer {
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0px;
+	height: var(--thumbLineHeight);
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: visible;
+	max-width: 100%;
+	pointer-events: all;
+	transition: opacity 0.5s ease;
+}
+.closedThumbLine .thumbContainer{
+opacity: 0;
+}
+.thumbContainerWrap {
+	pointer-events: none;
+	width: 100%;
+	height: calc(100% - var(--footerHeight));
+	position: absolute;
+	left: 0;
+	bottom: calc(var(--footerHeight) - 0px);
+	transition: all 0.5s ease;
+}
+
+.closedThumbLine.thumbContainerWrap {
+	bottom: calc(var(--thumbLineHeight) * -1 + var(--footerHeight) - 1px);
+}
+
+.thumbLine {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	background-color: rgba(0,0,0, 0.4);
+	display: flex;
+	gap: 10px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+.thumbLineHidden {
+	transform: translateY(20px) translateX(-50%);
+	opacity: 0;
+	z-index: -1;
+}
+.thumb {
+	width: calc((var(--thumbLineHeight) - 20px) * 1.5);
+	height: calc(var(--thumbLineHeight) - 20px);
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+	flex-shrink: 0;
+	border-radius: 5px 0;
+}
+
+
+
+.thumbSelected {
+	border: solid 2px rgba(255, 255, 255, 0.8);
+}
+
+
+.thumbFade {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 1;
+	pointer-events: none;
+	backdrop-filter: grayscale(100%);
+	-webkit-backdrop-filter: grayscale(100%);
+	transition: all 0.2s ease-in-out;
+	border-radius: 5px 0;
+	font-size: 12px;
+    padding: 7px 3px;
+}
+.thumbNum{
+	color:white;
+	display: inline;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+.thumbSelected>.thumbFade, body.hasHover .thumb:hover>.thumbFade {
+	backdrop-filter: grayscale(0%);
+	-webkit-backdrop-filter: grayscale(0%);
+	background-color: rgba(0, 0, 0, 0.0);
+}
+body.hasHover .thumb:hover>.thumbFade .thumbNum{
+	background-color: var(--colorGreenDark);
+}
+
+
+.thumbCloseButton {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	border-radius: 5px;
+	background-color: #00000080;
+	bottom: calc(var(--thumbLineHeight) + 5px);
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	pointer-events: all;
+	z-index: 1;
+	transition: var(--buttonOverTransition);
+}
+
+.thumbCloseButton::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: var(--thumbLineCloseButtonIcon);
+}
+
+body.hasHover .thumbCloseButton:hover {
+	background-color: var(--colorGreenDark);
+	box-shadow: var(--buttonOverOutline);
+}
+
+.closedThumbLine .thumbCloseButton {
+	/* bottom: calc(var(--thumbLineHeight) + 5px + var(--footerHeight)); */
+}
+
+.closedThumbLine .thumbCloseButton::after {
+	transform: rotate(180deg);
+}
+
+
+.thumbNumber {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	width: 40px;
+	height: 40px;
+	color: var(--colorLightGold);
+	background-color: black;
+	border-radius: 50%;
+	border: solid 2px var(--colorLightGold);
+	font-size: 1rem;
+	font-weight: 500;
+	transition: all 0.2s ease;
+}
+
+.thumb:hover .thumbNumber {
+	outline: solid 5px rgba(255, 255, 255, 0.2) !important;
+	background: linear-gradient(0deg, rgba(207, 138, 58, 1) 0%, rgba(224, 180, 129, 1) 100%);
+	border: none;
+	color: #fff;
+}
+
+.thumbNumber>div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.switherAboveThumbs {
+	transition: bottom 0.5s ease, box-shadow 0.3s ease;
+}
+
+.switherAboveThumbs.closedThumbLine {
+	bottom: calc(var(--footerHeight) + 30px);
+}

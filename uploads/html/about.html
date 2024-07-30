@@ -1,0 +1,33 @@
+<style>
+    .about__main{
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .about__main>div{
+        position: relative;
+    }
+</style>
+<div class='about__main'>
+    <div>
+
+        
+        <?php 
+
+$fields = get_fields(2029);
+
+if( $fields ): ?>
+    <ul>
+        <?php foreach( $fields as $name => $value ): ?>
+            <li><b><?php echo $name; ?></b> <?php echo $value; ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+
+    </div>
+    
+</div>

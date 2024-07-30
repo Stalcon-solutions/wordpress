@@ -1,0 +1,13 @@
+.popupContent img{
+    height:40vh;
+}
+.popupContent{
+    height:60%;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.popupContent h4{
+    text-align: center;
+    margin-bottom: 40px;
+}

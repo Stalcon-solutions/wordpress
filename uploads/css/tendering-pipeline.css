@@ -1,0 +1,72 @@
+.mapPinInside{
+    background-color: var(--colorGreen);
+}
+.mapPinContentContainer{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.addressIcon {
+    background-image: var(--iconMap);
+    width:3em;
+    height:3em;
+    background-color: var(--colorGreen);
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    margin-right: 1em;
+}
+.address{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.address > * {
+    position: relative;
+}
+
+
+
+
+
+.client{
+    padding-left: 4em;
+}
+.stat{
+    padding-left: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: normal;
+    width: max-content;
+}
+.stat>div{
+    padding:10px 0;
+}
+.statsValue{
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--colorBeige);
+    border-bottom:solid 1px var(--colorBeige);
+    transition: all 0.3s ease;
+}
+body.hasHover .stat:hover .statsValue{
+    color:var(--colorGreen);
+    border-color:var(--colorGreen);
+}
+
+.confirmed{
+    position: absolute;
+    top:0;
+    left:0;
+    width:90px;
+    height: 90px;
+    background-image: url(/wp-content/uploads/confirmed-sign.svg);
+}
+
+.popupContent{
+    width:max(70vw, 900px);
+    max-width:90vw;
+    min-height:70vh;
+}

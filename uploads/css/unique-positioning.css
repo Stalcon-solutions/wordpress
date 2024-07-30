@@ -1,0 +1,248 @@
+*{
+    --checkIcon:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%23ffffff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>');
+}
+.uniqPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    width:100%;
+}
+
+.topRow,
+.bottomRow {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width:100%;
+}
+
+.topRow>div,
+.bottomRow>div {
+    position: relative;
+}
+
+.topRow>h3,
+.bottomRow>h3 {
+    width: 100%;
+    text-align: center;
+}
+.topRowItem, .bottomRowItem{
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 33%;
+}
+.topRowItem>div{
+    /* width:200px;
+    height:auto;
+    max-width: 20vh; */
+
+    width:min(140px, 22vh);
+	height:min(140px, 22vh);
+	max-width: 100%;
+
+    overflow: hidden;
+    background-color: #ffffff20;
+    margin: 0 auto 20px auto;
+    border-radius: 3px;
+    border-radius: 50%;
+    border: solid 1px #ffffff80;
+    box-shadow: 3px 3px 30px #00000030;
+}
+.topRowItem>div>img{
+    width:100%;
+    height:100%;
+    transform: scale(0.6);
+    /* -webkit-filter: grayscale(0.5);
+    filter: grayscale(0.5); */
+    transition: all 0.3s ease;
+}
+.topRowItem>div:hover>img{
+    filter: none;
+    transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.object{
+    display: flex;
+    flex-direction: row;
+    
+    width: 80%;
+    /* padding:100px; */
+}
+.leftColumn, .rightColumn{
+    position: relative;
+    width:50%;
+    /* background-color: red; */
+    height: 100%;
+}
+.leftColumn{
+    border-right: solid 1px #f0f0f0;
+}
+.rightColumn{
+    padding-left: 30px;
+}
+.logos{
+    display: flex;
+    flex-direction: row;
+}
+.logos>div{
+    position: relative;
+    margin-right: 10px;
+}
+.rightColumn .logo{
+    width:180px;
+    height: 180px;
+    max-width: 20vh;
+    max-height: 20vh;
+    margin-bottom: 20px;
+    border:solid 1px #f0f0f0;
+}
+.rightColumn .logo img{
+    width:100%;
+    height: 100%;
+    position: relative;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+body.hasHover .rightColumn .logo:hover img{
+    transform: scale(1);
+}
+.stats{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+}
+.stat>div{
+    position: relative;
+    padding: 10px 0px;
+}
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    font-weight: normal;
+    text-align: center;
+}
+.statsValue{
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--colorBeige);
+    border-bottom:solid 1px var(--colorBeige);
+    transition: all 0.3s ease;
+}
+body.hasHover .stat:hover .statsValue{
+    color:var(--colorGreen);
+    border-color:var(--colorGreen);
+}
+
+.curImgsBlock{
+    display: flex;
+    flex-direction: row;
+}
+.curImgsBlock>div{
+    position: relative;
+}
+.curImg{
+    width:180px;
+    height: 180px;
+    max-width: 20vh;
+    max-height: 20vh;
+    position: relative;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.curImg img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.curImgName{
+    width:100%;
+    height:100%;
+    background-color: #00000080;
+    color:white;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+body.hasHover .curImg:hover .curImgName{
+    opacity: 1;
+}
+body.hasHover .curImg:hover img{
+    transform: scale(1.1);
+}
+.curCheck{
+    position: absolute;
+    z-index: 2;
+    bottom:0;
+    right:0;
+    width:25%;
+    height:25%;
+    background-color: #00000080;
+    background-image: var(--checkIcon);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+body.hasHover .curImg:hover .curCheck{
+    opacity: 0;
+}
+
+.tenderingBlock{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.tenderingBlock>div{
+    position: relative;
+    max-width: 50%;
+}
+.tenderingBlockImage{
+    overflow: hidden;
+}
+.tenderingBlockImage img{
+    width:100%;
+    height: 100%;
+    max-height: 37vh;
+    max-width: 37vh;
+    transition: all 0.3s ease;
+}
+body.hasHover .tenderingBlockImage:hover img{
+    transform: scale(1.1);
+}
+.tenderingBlockText{
+    padding: 0 30px;
+}
+.tenderingName{
+    font-weight: bold;
+    text-transform: uppercase;
+}

@@ -1,0 +1,163 @@
+/* Buttons */
+
+.buttonPrimary,
+.buttonSecondary {
+	user-select: none;
+	color:var(--colorWhite);
+	pointer-events: all;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	background-color: var(--colorBlack);
+	border: solid 1px var(--colorWhite50);
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition: var(--buttonOverTransition) !important;
+	isolation: isolate;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.buttonPrimaryWithText {
+	text-transform: uppercase;
+	padding: 15px 30px;
+	font-weight: 500;
+}
+.buttonPrimaryWithText img{
+	width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin: -10px 10px -10px -10px;
+}
+.buttonSecondary,
+.buttonPrimaryWithText {
+	width: auto;
+	height: auto;
+	font-size: 1rem;
+	border-radius: 20em;
+	display: inline-block;
+	line-height: 1em;
+	background-color: var(--colorBeige);
+	color:var(--colorBlack);
+}
+
+.buttonSecondary {
+	padding: 1em 2em;
+}
+
+body.hasHover .buttonPrimary:hover,
+body.hasHover .buttonSecondary:hover {
+	box-shadow: var(--buttonOverOutline);
+	background-color: var(--colorBlack);
+}
+body.hasHover .buttonPrimary:hover i,
+body.hasHover .buttonSecondary:hover,
+body.hasHover .buttonSecondary:hover i {
+	color: var(--colorWhite);
+}
+
+body.hasHover .buttonPrimaryWithText:hover{
+	border-color: var(--colorWhite50);
+}
+
+.buttonPrimary i {
+	color:white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5em;
+	line-height: normal;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.buttonSecondary i,
+.buttonPrimaryWithText i {
+	color: var(--colorGreenDark);
+	position: relative;
+	top: 0;
+	left: 0;
+	transform: none;
+	vertical-align: middle;
+	font-size: 13px;
+	line-height: 1em;
+}
+
+/* .buttonPrimary::after,
+.buttonSecondary::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--buttonOverGradient);
+	transform: scaleY(0);
+	opacity: 0;
+	transform-origin: top;
+	transition: transform 0.5s ease, opacity 0.3s ease;
+	z-index: -1;
+}
+
+body.hasHover .buttonPrimary:hover::after,
+body.hasHover .buttonSecondary:hover::after {
+	transform: scaleY(1);
+	opacity: 1;
+} */
+.btnDisabled{
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+/* Buttons */
+
+.homeButton{
+    background-image: var(--iconHome);
+}
+.autoplayStart{
+    background-image: var(--iconPlay);
+}
+.autoplayStop{
+    background-image: var(--iconStop);
+}
+.drawModeButton{
+    background-image: var(--iconDraw);
+}
+.prevButton{
+    background-image: var(--iconPrev);
+}
+.nextButton{
+    background-image: var(--iconNext);
+}
+.fullscreenButtonEnter{
+    background-image: var(--iconFullscreen);
+}
+.fullscreenButtonExit{
+    background-image: var(--iconFullscreenExit);
+}
+.iconMap{
+    background-image: var(--iconMap);
+}
+.icon360{
+    background-image: var(--icon360);
+    background-size: 24px;
+}
+
+.buttonIcon{
+		position: relative;
+		width: 1.2em;
+		height: 1.2em;
+		display: inline-block;
+		vertical-align: middle;
+		margin: -25px 10px -20px 0;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+}

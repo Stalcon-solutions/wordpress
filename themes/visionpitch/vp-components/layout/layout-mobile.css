@@ -1,0 +1,208 @@
+/*
+
+min-width:X = device width >= X
+max-width:Y = device width <= Y
+------------------------------------
+Smartphone horizontal: <1024
+Tablet horizontal: >= 1024
+Laptops: >=1280
+and (orientation: landscape)
+
+MacBook Air: = 1280
+Laptops & Desktops full hd: 1920
+
+*/
+
+
+/* Vertical smartphones and tablets - show black screen */
+@media only screen and (orientation: portrait) and (max-height: 1279px) {
+    .verticalScreenLocker {
+        display: flex;
+    }
+}
+
+body.ios .fullscreenButtonEnter{
+    display: none !important;
+}
+
+/* Not Desktop */
+@media only screen and (max-width: 1279px) {
+    .hideAtMobile{
+        display: none !important;
+    }
+}
+
+/* Tablets Horizontal */
+@media only screen and (orientation: landscape) and (min-width: 1024px) and (max-width: 1279px) {
+    /* .leftSide {
+        font-size: 14px;
+        line-height: 1.3em;
+    }
+    ul>li {
+        margin-bottom: 5px;
+    }
+    .buttonSecondary {
+        font-size: 1.0vw;
+    }
+    .buttonSecondary i {
+        display: none;
+    }
+    .col3>div {
+        padding: 20px;
+    }
+    html {
+        font-size: 1.2vw;
+    } */
+
+    body.fullscreen .menuOpenButtonTop {
+        display: none !important;
+    }
+    body.fullscreen .menuButtonFooter  {
+        display: block !important;
+    }
+    /* .leftSide img{
+        transform: scale(70%);
+        transform-origin: left bottom;
+    } */
+    
+    /* .leftSide {
+        width: 30%;
+        overflow-x: hidden;
+    } */
+    
+    /* .rightSide {
+        width: 70%;
+    } */
+    /* h1{
+        font-size: max(3.8vmin, 14px);
+    }
+    .teamContent{
+        max-width: 60% !important;
+    } */
+}
+
+
+
+
+
+
+
+/* Smartphones Horizontal */
+@media only screen and (orientation: landscape) and (max-width: 1023px) {
+    * {
+        --thumbLineHeight: 60px !important;
+        --footerHeight: 50px !important;
+        --headerHeight:0px !important;
+        --hotspotSize:20px;
+        --hotspotIconSize:16px;
+        --f-thumb-width: 48px !important;
+        --f-thumb-height: 36px !important;
+    }
+
+    /* html, .ggskin{
+        font-size: 11px;
+        line-height: 1.0;
+    } */
+    /* h1{
+        font-size: 18px;
+    }
+    h2{
+        font-size: max(2vmin, 14px);
+        font-weight: 300;
+    }
+    .leftSide hr {
+        margin: 15px 0;
+    }
+    hr{
+        margin: 15px auto;
+    } */
+    .footer{
+        height:var(--footerHeight);
+    }
+    /* .mapPinInsideNumber {
+        font-size: 10px;
+    } */
+    .buttonPrimary{
+        width: 36px;
+        height: 36px;
+    }
+    /* .buttonSecondary,
+    .buttonPrimaryWithText {
+        height:auto;
+        width:auto;
+        padding: 5px 7px;
+    } */
+    .slideTitleContainer,
+    .headerProjectTitle,
+    .menuTop,
+    .menuBottom {
+        display: none !important;
+    }
+
+    .mainMenu {
+        top: 0 !important;
+        height: 100vh !important;
+    }
+
+    main {
+        padding: 0 0 40px 0 !important;
+    }
+
+
+    .menuContainer {
+        width: 35vw !important;
+    }
+
+
+
+    .buttonPrimary {
+        padding: 5px 10px !important;
+        font-size: 9px !important;
+    }
+
+    header {
+        display: none !important;
+    }
+
+    .pageBgAnimated {
+        animation: none;
+        -webkit-animation: none;
+    }
+
+    .menuButtonFooter {
+        display: block !important;
+    }
+
+    .menuCloseButton {
+        top: 0 !important;
+        right: -40px !important;
+        border-radius: 0 5px 5px 0 !important;
+        background-color: var(--menu1levelBg) !important;
+        transform-origin: left;
+    }
+
+    .buttonSecondary i {
+        display: none;
+    }
+
+
+    .popupCloseButton {
+        top: 2px !important;
+        right: 2px !important;
+    }
+
+
+    .f-button{
+        width:30px !important;
+        height:30px !important;
+    }
+    .f-button .material-icons {
+        font-size: 14px !important;
+    }
+    .f-button.is-next {
+        right: 0 !important;
+    }
+    .f-button.is-prev{
+        left:0 !important;
+    }
+}

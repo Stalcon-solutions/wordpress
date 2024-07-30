@@ -1,0 +1,62 @@
+<style>
+    *{
+        --quotes:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="26" fill="none" viewBox="0 0 31 26"><path fill="%23000" fill-opacity=".1" d="M7.6 26c-1.467 0-2.667-.31-3.6-.929a7.693 7.693 0 0 1-2.3-2.373 8.85 8.85 0 0 1-1.4-3.61c-.2-1.308-.3-2.374-.3-3.2 0-3.37.833-6.43 2.5-9.182C4.167 3.955 6.767 1.72 10.3 0l.9 1.857c-2.067.894-3.833 2.304-5.3 4.23-1.533 1.926-2.3 3.887-2.3 5.881 0 .826.1 1.548.3 2.167 1.067-.894 2.3-1.341 3.7-1.341 1.733 0 3.233.584 4.5 1.754 1.267 1.169 1.9 2.785 1.9 4.849 0 1.926-.633 3.508-1.9 4.746C10.833 25.38 9.333 26 7.6 26Zm17 0c-1.467 0-2.667-.31-3.6-.929a7.694 7.694 0 0 1-2.3-2.373 8.85 8.85 0 0 1-1.4-3.61c-.2-1.308-.3-2.374-.3-3.2 0-3.37.833-6.43 2.5-9.182C21.167 3.955 23.767 1.72 27.3 0l.9 1.857c-2.067.894-3.833 2.304-5.3 4.23-1.533 1.926-2.3 3.887-2.3 5.881 0 .826.1 1.548.3 2.167 1.067-.894 2.3-1.341 3.7-1.341 1.733 0 3.233.584 4.5 1.754 1.267 1.169 1.9 2.785 1.9 4.849 0 1.926-.633 3.508-1.9 4.746C27.833 25.38 26.333 26 24.6 26Z"/></svg>');
+    }
+    .testimonial {
+        padding: 60px !important;
+        background-image: var(--quotes) !important;
+        background-repeat: no-repeat !important;
+        background-size: 10% !important;
+        background-position: 60px 60px !important;
+    }
+    .testimonialText{
+        font-family: var(--fontRegular);
+        font-size: 24px;
+        color: var(--colorGrayDark);
+
+        text-align:justify;
+    }
+    .testimonialAuthor{
+        text-align: center;
+        margin-top: 1em;
+    }
+    .popupContent{
+        justify-content: space-evenly;
+    }
+</style>
+
+
+<div class="animatedChildrens col3">
+    <div data-popup-id="pop1" data-popup-group="testimonial">
+        <img src="/wp-content/uploads/icons/our-partners-01.svg" class="contentIcon" alt="icon" />
+        <div class="divider20"></div>
+        <h4>Client testimonials</h4>
+    </div>
+    <div data-popup-id="pop12" data-popup-group="testimonial" style="display: none;"></div>
+
+    <div data-popup-id="pop2">
+        <img src="/wp-content/uploads/icons/icon-template.svg" class="contentIcon" alt="icon" />
+        <div class="divider20"></div>
+        <h4>Mix of clients</h4>
+    </div>
+
+    <div data-popup-id="pop3">
+        <img src="/wp-content/uploads/icons/icon-template.svg" class="contentIcon" alt="icon" />
+        <div class="divider20"></div>
+        <h4>Client Acquisition</h4>
+    </div>
+</div>
+
+
+
+<div id="pop1" class="testimonial">
+        <div class="testimonialText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec nunc ultrices, feugiat ante et, pretium lorem. Sed eu iaculis est, quis efficitur lectus. In quis dui elit. Curabitur interdum quam aliquet, cursus neque sit amet, porta mi. Praesent in diam tempus, convallis ipsum vitae, porttitor nulla. Nullam eleifend nibh ipsum, nec vehicula velit fringilla vel.</div>
+        <div class="testimonialAuthor"><b>Frank Moska</b> - Mosca Pserras Architects</div>
+</div>
+<div id="pop12" class="testimonial">
+        <div class="testimonialText">Nulla sed accumsan dolor. Fusce eleifend faucibus sem ut laoreet. Mauris hendrerit sodales nisl, at ullamcorper risus ultricies ut. Vivamus venenatis lorem ac nisl malesuada, vitae ullamcorper sapien porta. Sed nec bibendum sapien, et efficitur libero. Curabitur in odio a nulla accumsan volutpat et non felis. Nulla felis leo, porttitor vel pulvinar a, maximus vel arcu. Phasellus fermentum odio id commodo tincidunt. Morbi ullamcorper quis magna at aliquam. Integer aliquet eleifend nulla eu vulputate.</div>
+        <div class="testimonialAuthor"><b>Michael Dakhoul</b> - PM and QS Construction Consultants</div>
+</div>
+
+<div id="pop2"><br><br><br>Mix of clients - Infographics<br><br><br></div>
+<div id="pop3"><br><br><br>Client Acquisition - Infographics<br><br><br></div>
